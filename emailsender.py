@@ -16,7 +16,7 @@ def send_email(recipient):
     em.set_content(body)
     context = ssl.create_default_context()
     with smtplib.SMTP_SSL('smtp.gmail.com', 465, context=context) as smtp:
-        smtp.login('noah.flagcollector@gmail.com', 'mttvpxglmyptovvu')
+        smtp.login('noah.flagcollector@gmail.com', passkey)
         smtp.sendmail('noah.flagcollector@gmail.com', email_receiver, em.as_string())
 
 send_email('elvismonarchy@proton.me')
